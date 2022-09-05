@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="From Consumer Complaints to Investment Alpha for US Financial Companies #    Contents #    Data Sourcing
+  Feature Selection
+  Textual Analysis
+  Deriving Variables
+  Quantile Segmentation
+  Plotting Portfolio Performance
+   *Not investment advice. Do your own research.   Why You Should Read This Post #  There&rsquo;s a lot of data out there. But most people think it only has to be numeric.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="From Consumer Complaints to Investment Alpha for US Financial Companies" />
+<meta property="og:description" content="From Consumer Complaints to Investment Alpha for US Financial Companies #    Contents #    Data Sourcing
+  Feature Selection
+  Textual Analysis
+  Deriving Variables
+  Quantile Segmentation
+  Plotting Portfolio Performance
+   *Not investment advice. Do your own research.   Why You Should Read This Post #  There&rsquo;s a lot of data out there. But most people think it only has to be numeric." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://witoldkozlowski.me/docs/quant/quant_1/" />
+<meta property="article:modified_time" content="2022-08-29T15:28:56+08:00" />
+<title>From Consumer Complaints to Investment Alpha for US Financial Companies | Witold&#39;s Work Portfolio</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.a64c3fbabd2c7a93ee90dd37db9054580fcb37b8eef93f80b6fa286b030f64af.css" integrity="sha256-pkw/ur0sepPukN0325BUWA/LN7ju&#43;T&#43;AtvooawMPZK8=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.fec9ea3fe1ff59dce7d3a947307a3b401b6f3d27fcd2236c441d2cb8deadcac9.js" integrity="sha256-/snqP&#43;H/Wdzn06lHMHo7QBtvPSf80iNsRB0suN6tysk=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Witold&#39;s Work Portfolio</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Big Themes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/big-themes/big_theme_1/" class="">China&#39;s New Real Estate Boom? Using satellite data to quantify over-expansion in fixed assets</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/big-themes/big_theme_2/" class="">It&#39;s Coming - A property crash similar in scale and economic significance to that in the US 2007-08</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Quant</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quant/quant_1/" class="active">From Consumer Complaints to Investment Alpha for US Financial Companies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quant/quant_2/" class="">Satellite Night Time Lights (NTL) as Investment Signal for Indian Cement Stocks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/quant/quant_3/" class="">What Can We Glean From Company Filings (Without Actually Reading Them)?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Tidbits</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tidbits/tidbit_1/" class="">Why is China Pursuing &#34;Common Prosperity&#34;?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tidbits/tidbit_2/" class="">Where Will China Get Its Protein?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/tidbits/tidbit_3/" class="">What&#39;s Changed in China&#39;s Marriage Patterns?</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/witolot/" target="_blank" rel="noopener">
+        My Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>From Consumer Complaints to Investment Alpha for US Financial Companies</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-you-should-read-this-post"><strong>Why You Should Read This Post</strong></a></li>
+    <li><a href="#exec-summary"><strong>Exec Summary</strong></a></li>
+    <li><a href="#1-data-sourcing"><strong>1. Data Sourcing</strong></a></li>
+    <li><a href="#2-feature-selection"><strong>2. Feature Selection</strong></a></li>
+    <li><a href="#3-textual-analysis"><strong>3. Textual Analysis</strong></a></li>
+    <li><a href="#4-deriving-variables"><strong>4. Deriving Variables</strong></a></li>
+    <li><a href="#5-quantile-segmentation"><strong>5. Quantile Segmentation</strong></a></li>
+    <li><a href="#6-plotting-portfolio-performance"><strong>6. Plotting Portfolio Performance</strong></a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><blockquote class="book-hint info">
+  <h1 id="from-consumer-complaints-to-investment-alpha-for-us-financial-companies">
+  <strong>From Consumer Complaints to Investment Alpha for US Financial Companies</strong>
+  <a class="anchor" href="#from-consumer-complaints-to-investment-alpha-for-us-financial-companies">#</a>
+</h1>
+
+</blockquote>
+
+<hr>
+<blockquote class="book-hint warning">
+  <h2 id="contents">
+  <strong>Contents</strong>
+  <a class="anchor" href="#contents">#</a>
+</h2>
+<ol>
+<li>
+<p>Data Sourcing</p>
+</li>
+<li>
+<p>Feature Selection</p>
+</li>
+<li>
+<p>Textual Analysis</p>
+</li>
+<li>
+<p>Deriving Variables</p>
+</li>
+<li>
+<p>Quantile Segmentation</p>
+</li>
+<li>
+<p>Plotting Portfolio Performance</p>
+</li>
+</ol>
+
+</blockquote>
+
+<blockquote class="book-hint danger">
+  *Not investment advice. Do your own research.
+</blockquote>
+
+<hr>
+<h1 id="why-you-should-read-this-post">
+  <strong>Why You Should Read This Post</strong>
+  <a class="anchor" href="#why-you-should-read-this-post">#</a>
+</h1>
+<p>There&rsquo;s a lot of data out there. But most people think it only has to be numeric.
+The exercise herein is really about whether one can turn text itself into actionable data.
+And since we prove below that we can, this unlocks a whole new world of possibilities for extracting
+alpha from text sources. Consumer complaints, filings like 10-Ks, or even analyst reports
+themselves (i.e. parse the text of analyst reports, not the data they use, to build second
+order databases) can become actionable data.</p>
+<hr>
+<h1 id="exec-summary">
+  <strong>Exec Summary</strong>
+  <a class="anchor" href="#exec-summary">#</a>
+</h1>
+<p>Can publicly available data on consumer complaints be reworked in such a way as to generate
+discernible alpha in investment returns? Turns out that yes. Here are the portfolio results.</p>
+<p>
+  <img src="/images/quant/us_portfolio_final.png" alt="Image alt" /></p>
+<p>Specifically, we use the publicly available Consumer Financial Protection Bureau’s (CFPB)
+
+  <a href="https://www.consumerfinance.gov/data-research/consumer-complaints/">Complaints Database</a>.
+We tie the data to a universe of 25 publicly traded US consumer facing financial
+institutions. We extract features from the data and derive variables using textual analysis
+of the consumer complaint narratives.</p>
+<p>The derived variable is year-on-year similarity / change score in the consumer complaint
+narratives. The main idea is that if the complaints a company receives change year on year,
+this means something. In this case, it turns out that companies with the largest change
+(i.e. changers) in their complaints outperform non-changers. Inspecting the differences
+visually, it’s clearly visible that Portfolio Q1 performed worst and Q5 second best.
+The 130/30 long-short portfolio is best.</p>
+<p>*change_score = 1 - similarity_score</p>
+<hr>
+<h1 id="1-data-sourcing">
+  <strong>1. Data Sourcing</strong>
+  <a class="anchor" href="#1-data-sourcing">#</a>
+</h1>
+<p>We use the Consumer Financial Protection Bureau’s (CFPB) 
+  <a href="https://www.consumerfinance.gov/data-research/consumer-complaints/">Complaints Database</a>. These are complaints made against financial products of particular companies (e.g. credit scoring, credit cards, loans). The database updates daily.</p>
+<hr>
+<h1 id="2-feature-selection">
+  <strong>2. Feature Selection</strong>
+  <a class="anchor" href="#2-feature-selection">#</a>
+</h1>
+<p>We’re mostly interested in the “Consumer complaint narrative” column, which contains unstructured text. While the database goes back to 2011, these consumer narratives only become available from 2015, giving us 7 years of data (Jan 2015 - Dec 2021) with a total of 841,219 non-empty entries (consumers elect whether to disclose their narrative).</p>
+<p>
+  <img src="/images/quant/feature_selection_1.png" alt="Image alt" /></p>
+<p>Since not all companies which receive complaints are publicly traded, for the purpose of this exercise we’ll just peel the top 25 from the top and ticker tie them later in the workflow.</p>
+<p>
+  <img src="/images/quant/feature_selection_2.png" alt="Image alt" /></p>
+<hr>
+<h1 id="3-textual-analysis">
+  <strong>3. Textual Analysis</strong>
+  <a class="anchor" href="#3-textual-analysis">#</a>
+</h1>
+<p>Now we run the textual analysis:</p>
+<ul>
+<li>
+<p>Convert dataframe to corpus format</p>
+</li>
+<li>
+<p>Make tokens out of the words</p>
+</li>
+<li>
+<p>Remove stop words (e.g. “a”, “the”)</p>
+</li>
+<li>
+<p>Stem the words (e.g. so we count “fraudulent” and “fraud” as same since stem would be “fraud”)</p>
+</li>
+</ul>
+<p>Just for demonstration purposes, after all this data wrangling we can run a word cloud visualisation. In this case we’re comparing across companies for 2021.</p>
+<p>
+  <img src="/images/quant/textual_analysis_1.png" alt="Image alt" /></p>
+<p>And here’s a word cloud across time for the same company, Wells Fargo.</p>
+<p>
+  <img src="/images/quant/textual_analysis_2.png" alt="Image alt" /></p>
+<p>For building intuition, we can also run a lexical dispersion plot for particular keywords that may be relevant in the financial context. In this case we plot “fraud”, “identity”, “violat*” for Wells Fargo by year.</p>
+<p>
+  <img src="/images/quant/textual_analysis_3.png" alt="Image alt" /></p>
+<hr>
+<h1 id="4-deriving-variables">
+  <strong>4. Deriving Variables</strong>
+  <a class="anchor" href="#4-deriving-variables">#</a>
+</h1>
+<p>Here’s the key part. We want to calculate the similarity of each Company-Year’s worth of complaints to one another. E.g. We compare Wells Fargo complaints from 2021 to Wells Fargo complaints from 2020 using a similarity score for each year.</p>
+<p>Here’s a visualisation of the similarity score (i.e. derived variable). A score of 1 means that the nature of this year’s versus the previous year’s complaints is identical. The closer to zero, the more different is one Company-Year to another. By definition then: 1 - similarity_score = change_score.</p>
+<p>
+  <img src="/images/quant/deriving_vars_1.png" alt="Image alt" /></p>
+<p>Going further, we can plot company migration through time and quantiles like so:</p>
+<p>
+  <img src="/images/quant/deriving_vars_2.png" alt="Image alt" /></p>
+<hr>
+<h1 id="5-quantile-segmentation">
+  <strong>5. Quantile Segmentation</strong>
+  <a class="anchor" href="#5-quantile-segmentation">#</a>
+</h1>
+<p>To prepare the similarity score for testing, we need to:</p>
+<ul>
+<li>
+<p>Rank companies by their similarity score by year</p>
+</li>
+<li>
+<p>Assign these to quintiles</p>
+</li>
+<li>
+<p>Create portfolio weights</p>
+</li>
+<li>
+<p>Run calculations and plot the portfolios</p>
+</li>
+</ul>
+<p>Here’s a visualisation of the weights. Since we have 25 stocks in our universe, a quintile will be 5 stocks. Within each quintile, each stock will take a 20% weighting.</p>
+<p>
+  <img src="/images/quant/quantile_segm_1.png" alt="Image alt" /></p>
+<p>And here’s a visualisation of the Q5-Q1 portfolio weight. This is a long-short portfolio. Long the stocks from the favoured quintile and short the stocks from the disfavoured quintile. The favoured quintile was then weighted at 130 and the disfavoured at 30 to give a 130/30 allocation. Notice that the long stocks sum to above 1.00 and the short stocks have negative weights and sum to -1/3.</p>
+<p>
+  <img src="/images/quant/quantile_segm_2.png" alt="Image alt" /></p>
+<hr>
+<h1 id="6-plotting-portfolio-performance">
+  <strong>6. Plotting Portfolio Performance</strong>
+  <a class="anchor" href="#6-plotting-portfolio-performance">#</a>
+</h1>
+<p>Here are the resulting portfolios for each quintile. Inspecting the differences visually, it’s clear that Portfolio Q1 performed worst and Q5 second best. The 130/30 long-short portfolio is best.</p>
+<p>
+  <img src="/images/quant/us_portfolio_final.png" alt="Image alt" /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/ee46f3a932931e63da9c085f4a1d83864912e7f8" title='Last modified by witolot | 2022-22-08' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2022-22-08</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/quant/quant_1.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-you-should-read-this-post"><strong>Why You Should Read This Post</strong></a></li>
+    <li><a href="#exec-summary"><strong>Exec Summary</strong></a></li>
+    <li><a href="#1-data-sourcing"><strong>1. Data Sourcing</strong></a></li>
+    <li><a href="#2-feature-selection"><strong>2. Feature Selection</strong></a></li>
+    <li><a href="#3-textual-analysis"><strong>3. Textual Analysis</strong></a></li>
+    <li><a href="#4-deriving-variables"><strong>4. Deriving Variables</strong></a></li>
+    <li><a href="#5-quantile-segmentation"><strong>5. Quantile Segmentation</strong></a></li>
+    <li><a href="#6-plotting-portfolio-performance"><strong>6. Plotting Portfolio Performance</strong></a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

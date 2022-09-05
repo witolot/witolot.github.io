@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Witold&#39;s Work Portfolio</title>
+    <link>https://witoldkozlowski.me/docs/quant/</link>
+    <description>Recent content on Witold&#39;s Work Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://witoldkozlowski.me/docs/quant/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Consumer Complaints to Investment Alpha for US Financial Companies</title>
+      <link>https://witoldkozlowski.me/docs/quant/quant_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://witoldkozlowski.me/docs/quant/quant_1/</guid>
+      <description>From Consumer Complaints to Investment Alpha for US Financial Companies #    Contents #    Data Sourcing
+  Feature Selection
+  Textual Analysis
+  Deriving Variables
+  Quantile Segmentation
+  Plotting Portfolio Performance
+   *Not investment advice. Do your own research.   Why You Should Read This Post #  There&amp;rsquo;s a lot of data out there. But most people think it only has to be numeric.</description>
+    </item>
+    
+    <item>
+      <title>Satellite Night Time Lights (NTL) as Investment Signal for Indian Cement Stocks</title>
+      <link>https://witoldkozlowski.me/docs/quant/quant_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://witoldkozlowski.me/docs/quant/quant_2/</guid>
+      <description>Satellite Night Time Lights (NTL) as Investment Signal for Indian Cement Stocks #    Contents #    Indian Cement Plants
+  Satellite Night Time Lights (NTL)
+  Tying Night Time Lights to Stock Performance
+   *Not investment advice. Do your own research.   Why You Should Read This Post #  We prove that the simplest satellite Night Time Lights (NTL) signals can differentiate between publicly listed under- and out-performers.</description>
+    </item>
+    
+    <item>
+      <title>What Can We Glean From Company Filings (Without Actually Reading Them)?</title>
+      <link>https://witoldkozlowski.me/docs/quant/quant_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://witoldkozlowski.me/docs/quant/quant_3/</guid>
+      <description>What Can We Glean From Company Filings (Without Actually Reading Them)? #    Contents #    Plotting Change in Filings
+  Top Words by Salience
+  Sentiment Analysis
+  Takeaways
+   *Not investment advice. Do your own research.   Why You Should Read This Post #  Equity analysts have their plates full. Particularly during earnings season. While the quantitative analysis shown below cannot replicate the work of a good analyst, it can help one.</description>
+    </item>
+    
+  </channel>
+</rss>
